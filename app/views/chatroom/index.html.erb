@@ -1,2 +1,48 @@
-<h1>Chat room</h1>
+<h4 class="ui center aligned icon header">
+  <i class="circular users icon yellow"></i>
+  Say Something
+</h4>
 
+<div class="ui two column grid">
+  <div class="twelve wide column">
+    <div class="ui fluid card chat-box">
+      <div class="content chat-box-body" >
+        <% @messages.each do |message| %>
+          <div class="message-box">
+            <div class="message-header">
+              <%= message.user.username %>
+            </div>
+            <p class="message-text"><%= message.body %></p>
+          </div>
+        <% end %>
+      </div>
+      <div class="extra content">
+        <%= form_for(@message, url: message_path) do |f| %>
+          <div class="ui input fluid">
+            <%= f.text_field :body, placeholder:"Say something..." %>
+            <%= button_to raw("<i class=\"paper plane icon\"></i>"),
+                          message_path,
+                          class: "ui icon button yellow" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="four wide column">
+    <div class="ui fluid card chat-box">
+      <div class="content">
+        <div class="ui vertical fluid menu">
+          <a class="active item">
+            Users
+          </a>
+          <% @users.each do |user| %>
+            <a class="item">
+              <%= user.username %>
+            </a>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

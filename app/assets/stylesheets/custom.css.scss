@@ -1,1 +1,21 @@
 @import 'semantic-ui';
+
+.chat-box{
+  height: 450px;
+}
+
+.chat-box-body {
+  overflow-y: auto;
+}
+
+.message-box {
+  border: 1px solid #b58105;
+  border-radius: 10px;
+  background: #fff8db;
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 5px;
+  .message-header {
+    color: #b58105;
+  }
+}

@@ -1,0 +1,16 @@
+<div class="ui inverted  menu">
+  <div class="ui container">
+    <a class="item">
+      Home
+    </a>
+    <a class="item">
+      Messages
+    </a>
+    <a class="item active">
+      Friends
+    </a>
+    <div class="right menu">
+      <%= link_to "Logout", logout_path, class: 'ui item', data: { "turbo-method": :delete } %>
+    </div>
+  </div>
+</div>
