@@ -1,21 +1,45 @@
 @import 'semantic-ui';
 
 .chat-box{
-  height: 450px;
+  height: 500px;
 }
 
 .chat-box-body {
   overflow-y: auto;
+  max-height: 430px;
 }
 
-.message-box {
-  border: 1px solid #b58105;
-  border-radius: 10px;
-  background: #fff8db;
-  width: 200px;
-  padding: 10px;
-  margin-bottom: 5px;
-  .message-header {
-    color: #b58105;
+.message-box-container {
+  display: flex;
+  .message-box {
+    margin-right: auto;
+    border: 1px solid #b58105;
+    border-radius: 10px;
+    background: #fff8db;
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 5px;
+    .message-header {
+      color: #b58105;
+    }
   }
+
+  .message-box-current-user {
+    margin-left: auto;
+    border: 1px solid #cacaca;
+    border-radius: 10px;
+    background: #f8f8f9;
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 5px;
+    .message-header {
+      color: #cacaca;
+    }
+  }
+
+}
+
+
+.chat-footer{
+ height: 100px;
 }

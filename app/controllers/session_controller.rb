@@ -1,6 +1,6 @@
 class SessionController < ApplicationController
 
-  before_action :log_in_redirect, except: [:destroy]
+  before_action :log_in_redirect, only: [:create, :new, ]
   def create
     username = params[:session][:username]
     password = params[:session][:password]
@@ -21,14 +21,16 @@ class SessionController < ApplicationController
 
   def destroy
     session[:user_id] = nil
+    flash.now[:notice] = "User logout"
     redirect_to login_path
   end
   
   private
-  
   def log_in_redirect
+    if session[:user_id]
     flash[:notice] = "You are already logged in!"
     redirect_to root_path
+    end
   end
 
 

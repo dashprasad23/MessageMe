@@ -16,3 +16,4 @@ $(document).on('turbo:load', function() {
 let element = document.querySelector(".chat-box-body");
 element.scrollTop = element.scrollHeight;
 
+import "channels"
