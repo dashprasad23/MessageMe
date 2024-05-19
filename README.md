@@ -1,24 +1,48 @@
-# README
+# Chat Application
+Welcome to the MessageMe Chat Application! This is a real-time chat application built using Ruby on Rails. 
+It allows users to register, login, and chat with each other in real-time.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
+## Table of Contents
+* Features
+* Installation
+* Usage
 * Configuration
+* Testing
+* Contributing
+* License
 
-* Database creation
+## Features
+* User Authentication: Sign up, login, and logout functionality.
+* Real-time Messaging: Instant messaging using ActionCable.
+* Chat Rooms: Users can join chat rooms to have group conversations.
+* User Profiles: Each user has a profile page.
 
-* Database initialization
+## Installation
+### Prerequisites
+Make sure you have the following installed:
 
-* How to run the test suite
+* Ruby (version 2.7.6)
+* Rails (version 7.0.6)
 
-* Services (job queues, cache servers, search engines, etc.)
+# Setup
+ 1. Clone the repository:
+    ````shell
+    git clone https://github.com/dashprasad23/MessageMe.git
+    cd chat-application
+    ````
+ 2. Install the required gems:
+    ````shell
+    bundle install
+    ````
+3. Setup the database:
+   ````shell
+    rails db:create
+    rails db:migrate
+    ````
+4. Start the Rails server:
+     ````shell
+    rails server
+    ````
+5. Open your browser and navigate to http://localhost:3000.
 
-* Deployment instructions
 
-* ...
