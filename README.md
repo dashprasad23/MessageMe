@@ -5,11 +5,7 @@ It allows users to register, login, and chat with each other in real-time.
 ## Table of Contents
 * Features
 * Installation
-* Usage
-* Configuration
-* Testing
-* Contributing
-* License
+* Setuo
 
 ## Features
 * User Authentication: Sign up, login, and logout functionality.
@@ -24,7 +20,7 @@ Make sure you have the following installed:
 * Ruby (version 2.7.6)
 * Rails (version 7.0.6)
 
-# Setup
+## Setup
  1. Clone the repository:
     ````shell
     git clone https://github.com/dashprasad23/MessageMe.git
